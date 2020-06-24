@@ -17,8 +17,8 @@ public class BuscarProdutoSteps {
 	WebDriverWait wait = new WebDriverWait(getDriver(), 20);
 	HomePage homePage = new HomePage();
 	
-	@When("^pesquiso produto por código \"([^\"]*)\"$")
-	public void pesquisoProdutoPorCódigo(String arg1) throws Throwable {
+	@When("^pesquiso produto por codigo \"([^\"]*)\"$")
+	public void pesquisoProdutoPorCodigo(String arg1) throws Throwable {
 		homePage.escreverBusca(arg1);
 		homePage.clicarBuscar();
 
@@ -57,8 +57,8 @@ public class BuscarProdutoSteps {
 		Assert.assertEquals("Nenhum resultado encontrado para a consulta \"non-existent product\"", homePage.obterMsgSemResult());
 	}
 
-	@Then("^exibe mensagem busca inválida$")
-	public void exibeMensagemBuscaInválida() throws Throwable {
+	@Then("^exibe mensagem busca invalida$")
+	public void exibeMensagemBuscaInvalida() throws Throwable {
 		Thread.sleep(2000);
 		Assert.assertEquals("Sua busca por @@@ não encontrou resultado algum :(", homePage.obterMsgmResultInvalido());
 	}

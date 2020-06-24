@@ -17,7 +17,7 @@ public class DriverManager {
 				case FIREFOX: driver = new FirefoxDriver(); break;
 				case CHROME: driver = new ChromeDriver(); break; 
 			}
-			driver.manage().window().setPosition(new Point(1600, 0));
+//			driver.manage().window().setPosition(new Point(1600, 0));
 			driver.manage().window().maximize();
 		}
 		return driver;
